@@ -1,0 +1,19 @@
+backend:
+  name: test-repo
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: works
+    label: Works
+    folder: content/works
+    create: true
+    slug: "{{slug}}"
+    extension: json
+    format: json
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: Description, name: description, widget: markdown }
+      - { label: Date, name: date, widget: datetime }

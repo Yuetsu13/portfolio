@@ -1,0 +1,6 @@
+{
+  "title": "Example work",
+  "image": "https://picsum.photos/seed/cms1/800/800",
+  "description": "This is sample content. Replace it with entries from Decap CMS (JSON files in **content/works**). Add each new filename to **content/works-manifest.json**.",
+  "date": "2026-04-08T12:00:00.000Z"
+}
