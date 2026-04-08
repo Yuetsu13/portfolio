@@ -271,3 +271,6 @@ main.container {
   white-space: pre-wrap;
   text-align: left;
 }
+.card__caption {
+  display: none;
+}
