@@ -66,7 +66,7 @@ function buildCard(work) {
   img.className = "thumb";
   img.alt = work.title;
   img.loading = "lazy";
-  img.src = work.image || "";
+  img.src = work.thumbnail || "";
 
   const cap = document.createElement("div");
   cap.className = "card__caption";
@@ -125,10 +125,25 @@ function openWork(id, { pushUrl = true } = {}) {
   modalMediaEl.innerHTML = "";
   modalMediaEl.classList.remove("is-video");
 
+if (work.video_url) {
+  // 视频：转换为embed链接
+  let embedUrl = work.video_url;
+  const vimeoMatch = work.video_url.match(/vimeo\.com\/(\d+)/);
+  const youtubeMatch = work.video_url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
+  if (vimeoMatch) embedUrl = `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+  if (youtubeMatch) embedUrl = `https://www.youtube.com/embed/${youtubeMatch[1]}`;
+  const iframe = document.createElement("iframe");
+  iframe.src = embedUrl;
+  iframe.allowFullscreen = true;
+  iframe.allow = "autoplay; fullscreen";
+  modalMediaEl.appendChild(iframe);
+  modalMediaEl.classList.add("is-video");
+} else {
   const img = document.createElement("img");
   img.alt = work.title;
-  img.src = work.image || "";
+  img.src = work.image || work.thumbnail || "";
   modalMediaEl.appendChild(img);
+}
 
   modalEl.classList.add("is-open");
   modalEl.setAttribute("aria-hidden", "false");
@@ -201,11 +216,14 @@ async function loadWorkJson(filename) {
 }
 
 function normalizeWork(slug, raw) {
-  const image = raw.image || raw.cover || "";
+  const thumbnail = raw.thumbnail || raw.image || raw.cover || "";
+  const image = raw.image || raw.thumbnail || raw.cover || "";
   return {
     id: slug,
     title: raw.title ? String(raw.title) : "Untitled",
+    thumbnail: String(thumbnail),
     image: String(image),
+    video_url: raw.video_url ? String(raw.video_url) : "",
     description: raw.description != null ? String(raw.description) : "",
     date: raw.date != null ? String(raw.date) : "",
   };
