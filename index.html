@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
-
-    <!-- ✅ Netlify Identity -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- ✅ 处理邮箱回调 -->
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", function(user) {
-          if (!user) {
-            window.netlifyIdentity.on("login", function() {
-              window.location.href = "/admin/";
-            });
-          }
-        });
-
-        // ✅ 处理 invite / recovery token
-        window.netlifyIdentity.init();
-      }
-    </script>
   </head>
 
   <body>
