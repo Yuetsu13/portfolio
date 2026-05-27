@@ -54,10 +54,10 @@ body {
 
 .brand {
   font-family: 'Mona Sans', sans-serif;
-  font-weight: 600;
-  color: var(--accent);
+  font-variation-settings: 'wght' 800, 'wdth' 120;
+  color: #60DE39;
   letter-spacing: 0;
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1;
   transform: none;
 }
