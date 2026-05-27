@@ -5,7 +5,7 @@
   --border: rgba(0, 0, 0, 0.08);
   --header-bg: #ffffff;
   --header-h: 110px;
-  --accent: #8aea04;
+  --accent: #3DD55C;
   --font-base: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-brand: "Rubik Mono One", var(--font-base);
@@ -57,7 +57,7 @@ body {
   font-weight: 600;
   color: var(--accent);
   letter-spacing: 0;
-  font-size: 56px;
+  font-size: 52px;
   line-height: 1;
   transform: none;
 }
