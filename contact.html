@@ -29,15 +29,27 @@
     </header>
     <main class="container">
       <section style="padding: 22px 0 40px">
-        <h1 style="margin: 0 0 10px; font-size: 18px">Contact</h1>
-        <p style="margin: 0; color: #777; line-height: 1.7">
-          dp230040@gmail.com
-        </p>
-        <p style="margin: 14px 0 0; line-height: 1.8">
-          <a href="mailto:hello@example.com">hello@example.com</a><br />
-          <a href="#" rel="noreferrer">GitHub</a><br />
-          <a href="#" rel="noreferrer">X / Twitter</a>
-        </p>
+        <h1 style="margin: 0 0 24px; font-size: 18px">Contact</h1>
+        <form action="https://formsubmit.co/uetsu1992@gmail.com" method="POST" style="max-width: 480px">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://portfolio.moviemakers.workers.dev/contact.html" />
+          <div style="margin-bottom: 20px">
+            <input type="text" name="name" placeholder="Name" required
+              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
+          </div>
+          <div style="margin-bottom: 20px">
+            <input type="email" name="email" placeholder="Email address" required
+              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
+          </div>
+          <div style="margin-bottom: 32px">
+            <textarea name="message" placeholder="Message" required rows="4"
+              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; resize: none;"></textarea>
+          </div>
+          <button type="submit"
+            style="border: 2px solid #000; background: transparent; padding: 12px 32px; font-size: 14px; font-weight: 700; letter-spacing: 1px; cursor: pointer;">
+            SEND
+          </button>
+        </form>
       </section>
     </main>
   </body>
