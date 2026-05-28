@@ -6,9 +6,7 @@
   --header-bg: #ffffff;
   --header-h: 110px;
   --accent: 60DE39;
-  --font-base: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-brand: "Rubik Mono One", var(--font-base);
+  --font-base: Menlo, monospace;
 }
 
 * {
