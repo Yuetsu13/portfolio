@@ -22,6 +22,12 @@
       textarea {
         display: block;
       }
+      .contact-form input,
+      .contact-form textarea {
+        width: 480px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -41,27 +47,17 @@
         <p style="margin: 0 0 24px; color: #777; line-height: 1.7">
           Send me a message here or email <a href="mailto:uetsu1992@gmail.com" style="color: #777; text-decoration: underline;">uetsu1992@gmail.com</a>
         </p>
-        <form action="https://formsubmit.co/uetsu1992@gmail.com" method="POST" style="max-width: 480px">
+        <form action="https://formsubmit.co/uetsu1992@gmail.com" method="POST" class="contact-form">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://portfolio.moviemakers.workers.dev/contact.html" />
           <div style="margin-bottom: 20px">
             <input type="text" name="name" placeholder="Name" required
-              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; box-sizing: border-box;" />
+              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
           </div>
           <div style="margin-bottom: 20px">
             <input type="email" name="email" placeholder="Email address" required
-              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; box-sizing: border-box;" />
+              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
           </div>
           <div style="margin-bottom: 32px">
             <textarea name="message" placeholder="Message" required rows="4"
-              style="width: 100%; border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; resize: none; box-sizing: border-box;"></textarea>
-          </div>
-          <button type="submit"
-            style="border: none; background: #60DE39; color: #fff; padding: 12px 32px; font-size: 14px; font-weight: 700; letter-spacing: 4px; cursor: pointer;">
-            SEND
-          </button>
-        </form>
-      </section>
-    </main>
-  </body>
-</html>
+              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; b
