@@ -19,12 +19,20 @@
       input, textarea, button {
         font-family: Menlo, monospace;
       }
-      .contact-form input,
-      .contact-form textarea {
+      .contact-field {
         display: block;
-        width: 100%;
-        max-width: 480px;
+        width: 480px;
+        max-width: 100%;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        padding: 8px 0;
+        font-size: 16px;
+        outline: none;
+        background: transparent;
         box-sizing: border-box;
+        resize: none;
+        overflow: hidden;
+        line-height: 1.5;
       }
     </style>
   </head>
@@ -45,20 +53,18 @@
         <p style="margin: 0 0 24px; color: #777; line-height: 1.7">
           Send me a message here or email <a href="mailto:uetsu1992@gmail.com" style="color: #777; text-decoration: underline;">uetsu1992@gmail.com</a>
         </p>
-        <form action="https://formsubmit.co/uetsu1992@gmail.com" method="POST" class="contact-form">
+        <form action="https://formsubmit.co/uetsu1992@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://portfolio.moviemakers.workers.dev/contact.html" />
           <div style="margin-bottom: 20px">
-            <input type="text" name="name" placeholder="Name" required
-              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
+            <input type="text" name="name" placeholder="Name" required class="contact-field" />
           </div>
           <div style="margin-bottom: 20px">
-            <input type="email" name="email" placeholder="Email address" required
-              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent;" />
+            <input type="email" name="email" placeholder="Email address" required class="contact-field" />
           </div>
           <div style="margin-bottom: 32px">
-            <textarea name="message" placeholder="Message" required rows="4"
-              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; resize: none;"></textarea>
+            <textarea name="message" placeholder="Message" required rows="1" class="contact-field"
+              oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
           </div>
           <button type="submit"
             style="border: none; background: #60DE39; color: #fff; padding: 12px 32px; font-size: 14px; font-weight: 700; letter-spacing: 4px; cursor: pointer;">
