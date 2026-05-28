@@ -19,14 +19,23 @@
       input, textarea, button {
         font-family: Menlo, monospace;
       }
-      textarea {
-        display: block;
-      }
-      .contact-form input,
       .contact-form textarea {
+        display: block;
         width: 480px;
         max-width: 100%;
         box-sizing: border-box;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .contact-form input {
+        width: 480px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .contact-form button {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
       }
     </style>
   </head>
@@ -60,4 +69,14 @@
           </div>
           <div style="margin-bottom: 32px">
             <textarea name="message" placeholder="Message" required rows="4"
-              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; b
+              style="border: none; border-bottom: 1px solid #ccc; padding: 8px 0; font-size: 16px; outline: none; background: transparent; resize: none;"></textarea>
+          </div>
+          <button type="submit"
+            style="border: none; background: #60DE39; color: #fff; padding: 12px 32px; font-size: 14px; font-weight: 700; letter-spacing: 4px; cursor: pointer;">
+            SEND
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
