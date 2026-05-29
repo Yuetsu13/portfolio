@@ -5,7 +5,7 @@
   --border: rgba(0, 0, 0, 0.08);
   --header-bg: #ffffff;
   --header-h: 110px;
-  --accent: #60DE39;
+  --accent: #1759EF;
   --font-base: Menlo, monospace;
 }
 
@@ -53,7 +53,7 @@ body {
 .brand {
   font-family: 'Mona Sans', sans-serif;
   font-variation-settings: 'wght' 800, 'wdth' 120;
-  color: #60DE39;
+  color: #1759EF;
   letter-spacing: 0;
   font-size: 48px;
   line-height: 1;
