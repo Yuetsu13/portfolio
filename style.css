@@ -294,6 +294,12 @@ main.container {
     width: calc(100% - 80px);
     margin-top: 40px;
   }
+  .viewer__stage.is-video {
+    width: calc(100% - 80px);
+    max-width: calc(100% - 80px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
   .viewer__title {
     margin-top: 16px;
   }
