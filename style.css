@@ -288,3 +288,13 @@ main.container {
 .card__caption {
   display: none;
 }
+
+@media (max-width: 640px) {
+  .viewer__stage {
+    width: calc(100% - 80px);
+    margin-top: 40px;
+  }
+  .viewer__title {
+    margin-top: 16px;
+  }
+}
