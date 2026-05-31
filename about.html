@@ -13,6 +13,33 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      .about-section {
+        padding: 22px 0 40px;
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .about-text {
+        flex: 1;
+      }
+      .about-image {
+        flex: 0 0 35%;
+      }
+      .about-image img {
+        width: 100%;
+        display: block;
+      }
+      @media (max-width: 640px) {
+        .about-section {
+          flex-direction: column;
+        }
+        .about-image {
+          flex: none;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -26,8 +53,8 @@
       </div>
     </header>
     <main class="container">
-      <section style="padding: 22px 0 40px; display: flex; gap: 40px; align-items: flex-start;">
-        <div style="flex: 1;">
+      <section class="about-section">
+        <div class="about-text">
           <h1 style="margin: 0 0 10px; font-size: 18px">About</h1>
           <p style="margin: 0; color: #777; line-height: 1.7">
             Hi, I'm Yue — a Chinese motion graphic designer/illustrator/video editor based in Tokyo, Japan. <br>
@@ -45,8 +72,8 @@
             </a>
           </div>
         </div>
-        <div style="flex: 0 0 35%;">
-          <img src="/images/uploads/working.JPG" alt="Yue" style="width: 100%; display: block;" />
+        <div class="about-image">
+          <img src="/images/uploads/working.JPG" alt="Yue" />
         </div>
       </section>
     </main>
