@@ -130,7 +130,7 @@ if (work.video_url) {
   let embedUrl = work.video_url;
   const vimeoMatch = work.video_url.match(/vimeo\.com\/(\d+)/);
   const youtubeMatch = work.video_url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
-  if (vimeoMatch) embedUrl = `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+  if (vimeoMatch) embedUrl = `https://player.vimeo.com/video/${vimeoMatch[1]}?loop=1`;
   if (youtubeMatch) embedUrl = `https://www.youtube.com/embed/${youtubeMatch[1]}`;
   const iframe = document.createElement("iframe");
   iframe.src = embedUrl;
